@@ -20,6 +20,11 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
+    - name: cache
+      uses: klever1988/cachewrtbuild@main
+      with:
+        ccache: 'true'
+
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
